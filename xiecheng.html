@@ -1,0 +1,152 @@
+<!--
+ * @Author: your name
+ * @Date: 2021-03-02 10:12:24
+ * @LastEditTime: 2021-03-03 12:20:22
+ * @LastEditors: Please set LastEditors
+ * @Description: In User Settings Edit
+ * @FilePath: \付青青-01移动端基础e:\作业131\付青青-02响应式\index.html
+-->
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>携程网</title>
+    <link rel="stylesheet" href="./swiper/swiper-bundle.min.css">
+    <link rel="stylesheet" href="./index.css">
+</head>
+
+<body>
+    <div class="swiper-container">
+        <div class="swiper-wrapper">
+            <div class="swiper-slide">
+                <img src="./images/1.jpg" alt="">
+            </div>
+            <div class="swiper-slide">
+                <img src="./images/2.jpg" alt="">
+            </div>
+            <div class="swiper-slide">
+                <img src="./images/3.jpg" alt="">
+            </div>
+            <div class="swiper-slide">
+                <img src="./images/4.jpg" alt="">
+            </div>
+            <div class="swiper-slide">
+                <img src="./images/5.jpg" alt="">
+            </div>
+        </div>
+        <!-- 如果需要分页器 -->
+        <div class="swiper-pagination"></div>
+
+        <!-- 如果需要导航按钮
+        <div class="swiper-button-prev"></div>
+        <div class="swiper-button-next"></div> -->
+
+        <!-- 如果需要滚动条 -->
+        <!-- <div class="swiper-scrollbar"></div> -->
+    </div>
+
+
+    <ul class="list">
+        <li>酒店<span class="icon_one"></span></li>
+        <li>海外酒店</li>
+        <li>团购</li>
+        <li>特价酒店</li>
+        <li>民宿</li>
+    </ul>
+
+    <ul class="list2">
+        <li>机票<span class="icon_two"></span></li>
+        <li>火车票·抢票</li>
+        <li>特价机票</li>
+        <li>汽车票·船票</li>
+        <li>专车·租车</li>
+    </ul>
+
+    <ul class="list3">
+        <li>旅游<span class="icon_three"></span></li>
+        <li>目的地攻略</li>
+        <li>周边游</li>
+        <li>游轮旅行</li>
+        <li>定制旅行</li>
+    </ul>
+
+    <ul class="list4">
+        <li>景点·玩乐</li>
+        <li>礼品卡</li>
+        <li>美食林</li>
+        <li>WiFi·电话卡</li>
+        <li>购物·信用卡</li>
+        <li>保险·签证</li>
+    </ul>
+    
+    
+    <div class="t">
+        <img src="./images/pic_sale.png" alt="">
+    </div>
+    
+    <ul class="list5">
+        <li>
+            <span class="phone"></span>电话预定
+        </li>
+        <li>
+            <span class="dload"></span>下载客户端
+        </li>
+        <li>
+            <span class="me"></span>我的携程
+        </li>
+    </ul>
+
+   <ul class="list6">
+       <li>ENGLISH</li>
+       <li>电脑端</li>
+       <li>意见反馈</li>
+   </ul>
+   <div class="last">
+      @2018携程旅行│沪ICP备08023580号
+   </div>
+
+
+
+
+
+    <script src="./swiper/swiper-bundle.min.js"></script>
+    <script>
+        var mySwiper = new Swiper('.swiper-container', {
+            direction: 'horizontal', // 水平切换选项
+            loop: true, // 循环模式选项
+            autoplay:{
+                delay:900
+            },
+
+            // 如果需要分页器
+            pagination: {
+                el: '.swiper-pagination',
+            },
+
+            // // 如果需要前进后退按钮
+            // navigation: {
+            //     nextEl: '.swiper-button-next',
+            //     prevEl: '.swiper-button-prev',
+            // },
+
+            // // 如果需要滚动条
+            // scrollbar: {
+            //     el: '.swiper-scrollbar',
+            // },
+        })
+
+
+        function setRem(){
+        var uiw = 640,
+        winw = document.documentElement.clientWidth || document.body.clientWidth;
+        document.documentElement.style.fontSize = (winw/uiw) * 100 + 'px'; 
+    }
+       setRem();
+       window.onresize=setRem();
+    </script>
+</body>
+
+</html>
